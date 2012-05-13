@@ -1,0 +1,3 @@
+[submodule "src/ja"]
+	path = src/ja
+	url = git@github.com:jggug/grails-doc-src-ja.git
