@@ -81,6 +81,12 @@ tasks.addRule("Pattern: publishGuide_<lang>") { String taskName ->
         def lang = m[0][1]
         task(taskName, type: grails.doc.gradle.PublishGuide, dependsOn: ['apiDocs', 'copyApiDocs']) {
             language = lang
+            if(new File("${sourceDir}/${lang}/doc_${lang}.properties").exists()){
+                ant.delete(file:"${resourcesDir}/doc_${lang}.properties")
+                ant.native2ascii(src:"${sourceDir}/${lang}", dest: "${resourcesDir}",
+                                  includes: '**/doc_*.properties',encoding: 'UTF-8')
+                propertiesFiles << "${resourcesDir}/doc_${lang}.properties"
+            }
         }
     }
 }
