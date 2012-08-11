@@ -86,6 +86,7 @@ tasks.addRule("Pattern: publishGuide_<lang>") { String taskName ->
                 ant.native2ascii(src:"${sourceDir}/${lang}", dest: "${resourcesDir}",
                                   includes: '**/doc_*.properties',encoding: 'UTF-8')
                 propertiesFiles << "${resourcesDir}/doc_${lang}.properties"
+                propertiesFiles << new File(project.grailsHome, "build.properties")
             }
         }
     }
