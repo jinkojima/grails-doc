@@ -120,3 +120,6 @@ artifacts {
     archives dist
 }
 
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.0'
+}
