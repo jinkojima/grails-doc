@@ -10,3 +10,5 @@ output/
 bin/
 tmp/
 resources/doc_*.properties
+.idea/
+*.iml
