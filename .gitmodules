@@ -1,3 +1,3 @@
 [submodule "src/ja"]
-	path = src/ja
-	url = https://github.com/jggug/grails-doc-src-ja.git 
+  path = src/ja
+  url = git@github.com:nttsoft/grails-doc-src-ja.git
